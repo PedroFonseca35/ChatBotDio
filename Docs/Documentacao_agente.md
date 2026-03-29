@@ -5,29 +5,30 @@
 ### Problema
 Problema atacado pelo meu agente:
 
-O agente resolve a dificuldade de usuários iniciantes em compreender conceitos financeiros básicos e organizar suas finanças. Muitas pessoas enfrentam dúvidas sobre dívidas, juros, controle de gastos e planejamento.
+O agente resolve a dificuldade de usuários iniciantes em compreender conceitos financeiros básicos e a organizar suas finanças. Muitas pessoas enfrentam dúvidas sobre dívidas, juros, controle de gastos e planejamento.
 O sistema atua como um assistente que esclarece dúvidas, explica conceitos de forma simples e auxilia na tomada de decisões.
 
-Solução
-Como o agente resolve esse problema de forma proativa?
+### Solução
+Como ele resolve o problema:
 
-[Sua descrição aqui]
+O assistente antecipa dúvidas e dificuldades comuns de usuários iniciantes em finanças, oferecendo orientações claras. Ele sugere boas práticas, como organização de gastos, explicação de juros e planejamento básico, além de realizar simulações que ajudam o usuário a entender consequências financeiras antes de tomar decisões.
 
-Público-Alvo
-Quem vai usar esse agente?
+### Público-Alvo
 
-[Sua descrição aqui]
+Usuários iniciantes em educação financeira, especialmente jovens e adultos que possuem pouca experiência na gestão do próprio dinheiro. Em geral, são usuários que buscam informações simples, acessíveis e rápidas para melhorar seu controle financeiro no dia a dia.
 
-Persona e Tom de Voz
+---
+
+### Persona e Tom de Voz
 Nome do Agente
 [Nome escolhido]
 
-Personalidade
+### Personalidade
 Como o agente se comporta? (ex: consultivo, direto, educativo)
 
 [Sua descrição aqui]
 
-Tom de Comunicação
+### Tom de Comunicação
 Formal, informal, técnico, acessível?
 
 [Sua descrição aqui]
