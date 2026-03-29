@@ -19,7 +19,7 @@ Usuários iniciantes em educação financeira, especialmente jovens e adultos qu
 
 ---
 
-## Persona e Tom dom agente
+## Persona e Tom do agente
 
 ### Nome do Agente
 LUMI - Educador financeiro
