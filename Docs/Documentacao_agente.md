@@ -5,7 +5,7 @@
 ### Problema
 Problema atacado pelo meu agente:
 
-O agente resolve a dificuldade de usuários iniciantes em compreender conceitos financeiros básicos e organizar suas finanças. Muitas pessoas enfrentam dúvidas sobre dívidas, juros, controle de gastos e planejamento.
+O agente resolve a dificuldade de usuários iniciantes em compreender conceitos financeiros básicos e a organizar suas finanças. Muitas pessoas enfrentam dúvidas sobre dívidas, juros, controle de gastos e planejamento.
 O sistema atua como um assistente que esclarece dúvidas, explica conceitos de forma simples e auxilia na tomada de decisões.
 
 Solução
