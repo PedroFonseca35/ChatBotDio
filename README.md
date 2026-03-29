@@ -14,3 +14,5 @@ Personalizar respostas com base no contexto do usuário
 Cocriar soluções financeiras de forma consultiva
 Garantir segurança e confiabilidade nas respostas
 
+> [!TIP]
+> Consulte a documentação completa do projeto na pasta [`Docs/`](./Docs/).
