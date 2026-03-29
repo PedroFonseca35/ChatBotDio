@@ -72,12 +72,13 @@ flowchart TD
 
 ### Estratégias Adotadas
 
-- [ ] Só usa dados fornecidos no contexto
-- [ ] Não recomenda investimentos específicos
-- [ ] [ex: Quando não sabe, admite e redireciona]
-- [ ] [ex: Não faz recomendações de investimento sem perfil do cliente]
+- [x] Só usa dados fornecidos no contexto
+- [x] Não recomenda investimentos específicos
+- [x] Adimite quando não sabe algo
+- [x] Foca apenas em educar, não em aconselhar
 
 ### Limitações Declaradas
-> O que o agente NÃO faz?
 
-[Liste aqui as limitações explícitas do agente]
+- [x] Não faz recomendações de investimento
+- [x] Não acessa dados banários reais e/ou sensíveis
+- [x] Não substítui um profissional certificado
