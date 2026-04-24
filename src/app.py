@@ -5,7 +5,7 @@ import streamlit as st
 
 # Configuração ollama serve
 OLLAMA_URL = "http://localhost:11434/api/generate"
-MODELO = "gpt-oss"
+MODELO = "llama3:8b"
 
 # Carregar dados
 perfil = json.load(open('./data/perfil_investidor.json'))
@@ -66,7 +66,7 @@ def perguntar(msg):
     return r.json()['response']
 
 # Interface Streamlit
-st.title("Emote LUMI, Seu Educador Financeiro")
+st.title("🎓 LUMI, Seu Educador Financeiro")
 
 if pergunta := st.chat_input("Sua dúvida sobre finanças..."):
     st.chat_message("user").write(pergunta)
