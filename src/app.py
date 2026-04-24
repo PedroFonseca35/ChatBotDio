@@ -1,10 +1,10 @@
 import pandas as pd
 import json
-import resquests
+import requests
 import streamlit as st
 
 # Configuração ollama serve
-OLLAMA_URL = "http://localhost:xxx/api/generate"
+OLLAMA_URL = "http://localhost:11434/api/generate"
 MODELO = "gpt-oss"
 
 # Carregar dados
@@ -14,10 +14,12 @@ transacoes = pd.read_csv('./data/transacoes.csv')
 historico = pd.read_csv('./data/historico_atendimento.csv')
 
 # Montar contexto
+usuario = perfil['usuario']
+
 contexto = f"""
-CLIENTE: {perfil['nome']}, {perfil['idade']} anos, perfil {perfil['perfil_investidor']}
-OBJETIVO: {perfil['objetivo_principal']}
-PATRIMÔNIO: R$ {perfil['patrimonio_total']} | RESERVA: R$ {perfil['reserva_emergencia_atual']}
+CLIENTE: {usuario.get('idade', 'N/A')} anos, perfil {usuario.get('perfil_investidor', 'N/A')}
+OBJETIVO: {usuario.get('objetivo_principal', 'N/A')}
+PATRIMÔNIO: R$ {usuario.get('patrimonio_total', 'N/A')} | RESERVA: R$ {usuario.get('reserva_emergencia_atual', 'N/A')}
 
 TRANSAÇÕES RECENTES:
 {transacoes.to_string(index=False)}
@@ -60,8 +62,8 @@ def perguntar(msg):
     {contexto}
 
     Pergunta: {msg}"""
-    r = request.post(OLLMA_URL, json={"model": MODELO, "prompt": prompt, "stream": False})
-     return r.json()['response']
+    r = requests.post(OLLAMA_URL, json={"model": MODELO, "prompt": prompt, "stream": False})
+    return r.json()['response']
 
 # Interface Streamlit
 st.title("Emote LUMI, Seu Educador Financeiro")
@@ -69,4 +71,4 @@ st.title("Emote LUMI, Seu Educador Financeiro")
 if pergunta := st.chat_input("Sua dúvida sobre finanças..."):
     st.chat_message("user").write(pergunta)
     with st.spinner("..."):
-    st.chat_message("assistant").write(perguntar(pergunta))
+        st.chat_message("assistant").write(perguntar(pergunta))

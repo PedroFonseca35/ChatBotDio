@@ -1,9 +1,7 @@
 # Tecnologias da Aplicação
 
 ```
-streamlit
-openai
-python-dotenv
+Python + Streamlit + Ollama + gpt-oss
 ```
 
 Instalar o ollama.com
@@ -14,11 +12,14 @@ ollama serve
 ## Como Rodar
 
 ```bash
+
+# Iniciar o ollama no terminal
+ollama run gpt-oss
+# Server Ollama no terminal
+ollama serve
 # Instalar dependências
-pip install -r requirements.txt
 pip install streamlit pandas requests
 # Rodar a aplicação
-streamlit run app.py
 stremlit run .\src\app.py
 ```
 
