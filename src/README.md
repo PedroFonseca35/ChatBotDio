@@ -23,6 +23,7 @@ ollama rm llama3:8b
 ollama serve
 # Instalar dependências
 pip install streamlit pandas requests
+python -m streamlit run .\src\app.py
 # Rodar a aplicação
-stremlit run .\src\app.py
+streamlit run .\src\app.py
 ```
