@@ -15,7 +15,6 @@ transacoes = pd.read_csv('./data/exemplo_de_transacoes.csv')
 atendimento = pd.read_csv('./data/exemplo_atendimento.csv')
 
 # Montar contexto
-
 contexto = f"""
 EXEMPLO DE INVESTIMENTOS
 {json.dumps(random.sample(renda, 2), ensure_ascii=False)}
