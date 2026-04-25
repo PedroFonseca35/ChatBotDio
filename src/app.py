@@ -10,23 +10,15 @@ MODELO = "llama3:8b"
 
 # Carregar dados
 renda = json.load(open('./data/tipos_de_renda.json'))
-investimentos = json.load(open('./data/metas_investimento.json'))
-transacoes = pd.read_csv('./data/exemplo_de_transacoes.csv')
 atendimento = pd.read_csv('./data/exemplo_atendimento.csv')
 
 # Montar contexto
 contexto = f"""
 EXEMPLO DE INVESTIMENTOS
-{json.dumps(random.sample(renda, 2), ensure_ascii=False)}
-
-EXEMPLO DE GASTOS:
-{transacoes.sample(3).to_string(index=False)}
+{json.dumps(random.sample(renda, 1), ensure_ascii=False)}
 
 EXEMPLO ATENDIMENTO:
-{atendimento.sample(3).to_string(index=False)}
-
-METAS DE INVESTIMENTO:
-{json.dumps(random.sample(investimentos, 2), ensure_ascii=False)}
+{atendimento.sample(1).to_string(index=False)}
 """
 # SYSTEM PROMPT
 SYSTEM_PROMPT = """

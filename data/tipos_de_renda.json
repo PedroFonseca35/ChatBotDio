@@ -3,70 +3,30 @@
     "nome": "Tesouro Selic",
     "categoria": "renda_fixa",
     "risco": "baixo",
-    "rentabilidade": "100% da Selic",
-    "aporte_minimo": 30.00,
-    "indicado_para": "Reserva de emergência e iniciantes"
+    "indicado_para": "Reserva de emergência"
   },
   {
     "nome": "CDB Liquidez Diária",
     "categoria": "renda_fixa",
     "risco": "baixo",
-    "rentabilidade": "102% do CDI",
-    "aporte_minimo": 100.00,
-    "indicado_para": "Quem busca segurança com rendimento diário"
+    "indicado_para": "Segurança e liquidez"
   },
   {
     "nome": "LCI/LCA",
     "categoria": "renda_fixa",
     "risco": "baixo",
-    "rentabilidade": "95% do CDI",
-    "aporte_minimo": 1000.00,
-    "indicado_para": "Quem pode esperar 90 dias (isento de IR)"
+    "indicado_para": "Isenção de imposto"
   },
   {
-    "nome": "Fundo Imobiliário (FII)",
+    "nome": "Fundo Imobiliário",
     "categoria": "fundo",
     "risco": "medio",
-    "rentabilidade": "6% a 12% ao ano",
-    "aporte_minimo": 100.00,
-    "indicado_para": "Perfil moderado que busca diversificação e renda recorrente mensal"
+    "indicado_para": "Diversificação"
   },
   {
-    "nome": "Fundo de Ações",
-    "categoria": "fundo",
-    "risco": "alto",
-    "rentabilidade": "Variável",
-    "aporte_minimo": 100.00,
-    "indicado_para": "Perfil arrojado com foco no longo prazo"
-  },
-  {
-  "nome": "Poupança",
-  "categoria": "renda_fixa",
-  "risco": "baixo",
-  "rentabilidade": "Baixa, definida por regra da Selic",
-  "aporte_minimo": 5.00,
-  "indicado_para": "Usuários iniciantes que priorizam simplicidade e liquidez"
-},
-{
-  "nome": "Tesouro Prefixado",
-  "categoria": "renda_fixa",
-  "risco": "baixo",
-  "rentabilidade": "Taxa fixa definida no momento da aplicação",
-  "aporte_minimo": {
-    "min": 4.78,
-    "max": 8.29
-  },
-  "indicado_para": "Quem quer previsibilidade de retorno até o vencimento"
-},
-{
-  "nome": "Tesouro IPCA+",
-  "categoria": "renda_fixa",
-  "risco": "baixo",
-  "rentabilidade": "IPCA + taxa fixa",
-  "aporte_minimo": {
-    "min": 9.10,
-    "max": 42.10
-  },
-  "indicado_para": "Proteção contra inflação no longo prazo"
-}
+    "nome": "Tesouro IPCA+",
+    "categoria": "renda_fixa",
+    "risco": "baixo",
+    "indicado_para": "Proteção inflação"
+  }
 ]
