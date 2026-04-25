@@ -26,7 +26,7 @@ EXEMPLO DE GASTOS:
 EXEMPLO ATENDIMENTO:
 {atendimento.sample(3).to_string(index=False)}
 
-METAS:
+METAS DE INVESTIMENTO:
 {json.dumps(random.sample(investimentos, 2), ensure_ascii=False)}
 """
 # SYSTEM PROMPT
@@ -38,12 +38,14 @@ REGRAS:
 Use apenas dados fornecidos
 Não recomende investimentos específicos
 Explique riscos
-Linguagem simples
+Linguagem simples, curta e objetiva
 Não invente informações, admita: Não tenho essa informação
 Não garantia de retorno financeiro
 Não substitua orientação profissional (contador, assessor, etc.)
 Não solicite ou utilize dados sensíveis
 Não peça dados sensíveis
+Se o usuário apenas cumprimentar (oi, olá etc), apenas cumprimente e pergunte qual dúvida financeira ele tem
+Se a pergunta não for sobre finanças, diga que você atende apenas temas financeiros
 """
 
 # Chamar ollama
@@ -53,7 +55,6 @@ def perguntar(msg):
 
     O contexto abaixo são exemplos didáticos e não representam o usuário atual
     Não assuma que o usuário possui esse perfil
-    Não diga ao usuário que vai usar dados da pasta data
     {contexto}
 
     Pergunta: {msg}"""
