@@ -1,5 +1,5 @@
 # Tecnologias da Aplicação
-
+LUMI(Linguagem Unificada e Mentoria em Investimentos)
 ```
 Python + Streamlit + Ollama + llama3
 ```
