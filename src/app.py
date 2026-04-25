@@ -53,7 +53,37 @@ def perguntar(msg):
     return r.json()['response']
 
 # Interface Streamlit
-st.title("🎓 LUMI, Seu Educador Financeiro")
+st.set_page_config(
+    page_icon="💡",
+    layout="centered"
+)
+
+# Sidebar
+with st.sidebar:
+    st.title("💡 LUMI")
+    st.write("Educador financeiro didático")
+    
+    st.markdown("---")
+    st.write("**Posso ajudar com:**")
+    st.write("• Tesouro Selic")
+    st.write("• CDB e CDI")
+    st.write("• Reserva de emergência")
+    st.write("• Orçamento e dívidas")
+
+    st.markdown("---")
+    st.caption("Não recomendo investimentos específicos.")
+
+st.markdown(
+    "<h1 style='text-align: center;'>🎓 LUMI, Seu Educador Financeiro</h1>",
+    unsafe_allow_html=True
+)
+
+# Mensagem inicial do assistente
+if "inicio" not in st.session_state:
+    st.session_state.inicio = True
+    st.chat_message("assistant").write(
+        "Olá! Sou o LUMI. Pode me perguntar sobre investimentos, orçamento ou educação financeira."
+    )
 
 if pergunta := st.chat_input("Sua dúvida sobre finanças..."):
     st.chat_message("user").write(pergunta)
