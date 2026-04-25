@@ -9,28 +9,25 @@ OLLAMA_URL = "http://localhost:11434/api/generate"
 MODELO = "llama3:8b"
 
 # Carregar dados
-perfil = json.load(open('./data/perfil_investidor.json'))
-produtos = json.load(open('./data/produtos_financeiros.json'))
-transacoes = pd.read_csv('./data/transacoes.csv')
-historico = pd.read_csv('./data/historico_atendimento.csv')
+renda = json.load(open('./data/tipos_de_renda.json'))
+investimentos = json.load(open('./data/metas_investimento.json'))
+transacoes = pd.read_csv('./data/exemplo_de_transacoes.csv')
+atendimento = pd.read_csv('./data/exemplo_atendimento.csv')
 
 # Montar contexto
-usuario = perfil['usuario']
 
 contexto = f"""
+EXEMPLO DE INVESTIMENTOS
+{json.dumps(random.sample(renda, 2), ensure_ascii=False)}
 
-Perfil: {usuario.get('perfil_investidor', 'N/A')}
-Objetivo: {usuario.get('objetivo_principal', 'N/A')}
-Reserva: {usuario.get('reserva_emergencia_atual','N/A')}
-
-TRANSAÇÕES RECENTES:
+EXEMPLO DE GASTOS:
 {transacoes.sample(3).to_string(index=False)}
 
-ATENDIMENTOS ANTERIORES:
-{historico.sample(3).to_string(index=False)}
+EXEMPLO ATENDIMENTO:
+{atendimento.sample(3).to_string(index=False)}
 
-PRODUTOS DISPONÍVEIS:
-{json.dumps(random.sample(produtos, 3), ensure_ascii=False)}
+METAS:
+{json.dumps(random.sample(investimentos, 2), ensure_ascii=False)}
 """
 # SYSTEM PROMPT
 SYSTEM_PROMPT = """
@@ -54,7 +51,9 @@ def perguntar(msg):
     prompt = f"""
     {SYSTEM_PROMPT}
 
-    CONTEXTO DO CLIENTE:
+    O contexto abaixo são exemplos didáticos e não representam o usuário atual
+    Não assuma que o usuário possui esse perfil
+    Não diga ao usuário que vai usar dados da pasta data
     {contexto}
 
     Pergunta: {msg}"""
