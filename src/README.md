@@ -13,9 +13,9 @@ ollama serve
 ## Como Rodar
 
 ```bash
-# Instalar gpt-oss terminal
+# Instalar llama3 terminal
 ollama pull llama3:8b
-# Iniciar o ollama terminal
+# Iniciar o llama3 no terminal
 ollama run llama3:8b
 # Desintalar terminal
 ollama rm llama3:8b
@@ -26,4 +26,12 @@ pip install streamlit pandas requests
 python -m streamlit run .\src\app.py
 # Rodar a aplicação
 streamlit run .\src\app.py
+python -m streamlit run .\src\app.py
+```
+
+```bash
+# Instalar llama3 terminal
+ollama pull gemma2:2b
+# Desintalar terminal
+ollama rm gemma2:2b
 ```
