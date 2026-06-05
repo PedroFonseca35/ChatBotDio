@@ -34,4 +34,9 @@ python -m streamlit run .\src\app.py
 ollama pull gemma2:2b
 # Desintalar terminal
 ollama rm gemma2:2b
+
+===
+
+ollama pull qwen2.5:3b
+ollama rm qwen2.5:3b
 ```
