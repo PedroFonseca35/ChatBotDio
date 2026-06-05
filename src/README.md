@@ -36,7 +36,7 @@ ollama pull gemma2:2b
 ollama rm gemma2:2b
 
 ===
-
+# melhor no português
 ollama pull qwen2.5:3b
 ollama rm qwen2.5:3b
 ```

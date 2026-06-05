@@ -6,7 +6,7 @@ import random
 
 # Configuração ollama serve
 OLLAMA_URL = "http://localhost:11434/api/generate"
-MODELO = "llama3:8b"
+MODELO = "qwen2.5:3b"
 
 # Carregar dados
 renda = json.load(open('./data/tipos_de_renda.json'))
