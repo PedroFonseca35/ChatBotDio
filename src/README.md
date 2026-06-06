@@ -3,14 +3,14 @@ LUMI(Linguagem Unificada e Mentoria em Investimentos)
 ```
 Python + Streamlit + Ollama + llama3
 ```
-
+Instalar python
 Instalar o ollama.com
 models -> gpt-oss
 ollama pull gpt-oss:20b
 ollama run gpt-oss
 ollama serve
 
-## Como Rodar
+## Como Rodar 
 
 ```bash
 # Instalar llama3 terminal
